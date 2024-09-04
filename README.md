@@ -37,10 +37,11 @@ After clustering, the BERT tokenizer was used to tokenize the anthems. Each anth
 Padding and Attention Masks:
 
 Sequences were padded to ensure uniform input length. Attention masks were generated to differentiate between real tokens and padding tokens.
+
 Handling Imbalanced Data
 Given the imbalanced nature of the clusters, oversampling techniques were applied to ensure that the minority classes were sufficiently represented. The RandomOverSampler from the imbalanced-learn library was used to balance the dataset.
 
-Modeling
+**Modeling**
 Model Architecture:
 
 A pre-trained BERT model (bert-base-uncased) was fine-tuned for the classification task. The model includes a classification head that maps BERT's output to the thematic clusters identified by K-means.
@@ -59,6 +60,7 @@ The fine-tuned BERT model, following K-means clustering, achieved the following 
 
 Validation Accuracy: 87%
 Precision, Recall, F1-Score: High scores across most clusters, indicating that the model is both accurate and reliable.
+
 Classification Report:
                                     precision    recall  f1-score   support
 
@@ -76,7 +78,7 @@ Fatherland, blessings and divinity       0.92      1.00      0.96        12
      Unity and collective strength       0.67      0.44      0.53         9
           Unity and national glory       1.00      1.00      1.00         8
 
-Usage
+**Usage**
 Installation
 To use this project, clone the repository and install the required dependencies:
 
@@ -106,9 +108,6 @@ The model can be fine-tuned further by experimenting with different hyperparamet
 
 Contributing
 Contributions are welcome! Please fork the repository and submit a pull request if you have any improvements or new features.
-
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 
 
